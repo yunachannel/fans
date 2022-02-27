@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ゆなのファンのためのユーザーページサイト</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="ゆなのファンのためのユーザーページサイトです。">
+  <link rel="canonical" href="https://fans.yunachannel.com/u/">
+  <style>
+  </style>
+</head>
+<body>
+  <h1>ゆなのファンのためのユーザーページサイト</h1>
+  <p>fans.yunachannel.comのユーザーページサイトです。</p>
+<p>ページの作成や編集は<a href="https://github.com/yunachannel/fans/u/" >GitHubからできます</a>。また、このサイトに関して分からないことがある場合も<a href="https://github.com/yunachannel/fans/">GitHub</a>で質問できます。</p>
+<label for="newfile">作成するファイル名を入力</label><input id="newfile" placeholder="ファイル名" name="newfile" autocomplete="off" spellcheck="false"><button id="btn-newfile" class="btn-newfile" type="submit">作成</button>
+<label for="editfile">編集するファイル名を入力</label><input id="editfile" placeholder="ファイル名" name="editfile" autocomplete="off" spellcheck="false"><button id="btn-newfile" class="btn-editfile" type="submit">編集</button>
+<script>
+function newFile(){
+  var namenewfile = document.getElementById('newfile').value;
+  location.href='https://github.com/yunachannel/fans/new/master/u/' + namenewfile;
+  return false;
+}
+function editFile(){
+  var nameeditfile = document.getElementById('editfile').value;
+  location.href='https://github.com/yunachannel/fans/edit/master/u/' + nameeditfile;
+  return false;
+}
+
+const btnnewfile = document.getElementById('btn-newfile');
+btnnewfile.addEventListener('click', newFile);
+const btneditfile = document.getElementById('btn-editfile');
+btnnewfile.addEventListener('click', editFile);
+</script>
+</body>
+</html>
